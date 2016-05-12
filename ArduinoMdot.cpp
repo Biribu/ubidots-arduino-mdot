@@ -81,7 +81,7 @@ bool Ubidots::loraSend(float data, byte name) {
  * @arg pwd the PASSWORD of the APN
  * @return true upon success
  */
-bool Ubidots::loraConnection(char* ssid, char* pass, , char* band) {
+bool Ubidots::loraConnection(char* ssid, char* pass, char* band) {
     _client.write("AT\r\n");
     if (strstr(readData(1000), "ERROR") != NULL) {
 #ifdef DEBUG_UBIDOTS
