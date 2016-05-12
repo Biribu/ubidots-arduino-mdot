@@ -29,7 +29,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 class Ubidots{
  private:
         SoftwareSerial _client = SoftwareSerial(10, 11);
-        char* readData(uint16_t timeout);
         bool loraConnection(char* ssid, char* pass);
         void flushInput();
 
@@ -37,5 +36,6 @@ class Ubidots{
         Ubidots();
         bool loraVerify(char* ssid, char* pass);
         bool loraSend(float data, byte name, char* band);
+        char* readData(uint16_t timeout);
 };
 #endif  // _UbidotsMdot_H_
